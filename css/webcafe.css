@@ -4,7 +4,7 @@ body{
     
     margin: 0;
 }
-.header, .visual, .main-content, .slogen, .footer{
+.header, .visual, .main-content, .slogan, .footer{
     margin: 0 auto;
     width: 950px;
 }
@@ -22,12 +22,12 @@ body{
     background-color: skyblue;
 
 }
-.slogen{
+.slogan{
     background-color: orange;
     padding: 15px 0;
 }
 
-.footer-bg {
+.footer-bg{
     background-color: silver;
     padding: 15px 0;
 }
