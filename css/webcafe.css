@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+body{
+    
+    margin: 0;
+}
+.header, .visual, .main-content, .slogen, .footer{
+    margin: 0 auto;
+    width: 950px;
+}
+.header{
+    box-sizing: border-box;
+    background-color: pink;
+    height: 10vh;
+ }
+.visual{
+    background-color: lime;
+    height: 120px;
+}
+.main-content{
+    min-height: 400px;
+    background-color: skyblue;
+
+}
+.slogen{
+    background-color: orange;
+    padding: 15px 0;
+}
+
+.footer-bg {
+    background-color: silver;
+    padding: 15px 0;
+}
+.footer{
+    background-color: yellow;
+}
