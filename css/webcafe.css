@@ -47,7 +47,8 @@ body{
   margin: 0;
   position: absolute;
   top: 45px;
-  left: 70px; 
+  left: 70px;
+   /*z-index: 10;  */
 }
  /* 멤버 링크 */
  .member{
@@ -68,7 +69,7 @@ body{
     background-color: orange;
     content: '\f142';
     font-family: "fontello";
-     */
+ }*/
 .member li:nth-child(n+2)::before{
   font-family: 'fontello';
   content: '\f142';
@@ -79,7 +80,8 @@ body{
 }
 /* 메인메뉴 */
 .menu{
-  background-color: #e5801b;
+  /* position: relative; */
+  background-color: yellow;
   background-image: linear-gradient(to bottom, #f7f765 0%,#e5801b 35%,#e5801b 70%,#f7f765 100%); 
   padding-left: 225px;
   list-style: none;
@@ -98,13 +100,31 @@ body{
 }
 .menu-item{
   float: left;
-  line-height: 45px;
+  position: relative;
+  /* padding: 0 20px; */
+  /* padding: 10px 0; */
+}
+.menu-act .btn-menu{
+  color: #ff0 !important;
+  /* border-bottom: 2px solid #000; */
 }
 .btn-menu{
+  /* background-color: yellow; */
+  display: block;
+  height: 45px;
+  line-height: 45px;
+  border-left: 2px solid rgba(255, 255, 255, 0.5);
+  padding: 0px 20px;
   font-weight: 700;
   font-size: 1.6rem;
   color: #fff;
   text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000;
+}
+.menu-act .btn-menu::after{
+  content: "";
+  /* background-color: blue; */
+  display: block;
+  border-top: 2px solid #000;
 }
 .sub-menu{
   padding-left: 0;
@@ -113,11 +133,91 @@ body{
   background-color: yellow;
   position: absolute;
   display: none;
+  /* width: 500px; */
+  white-space: nowrap;
 }
+.sub-menu li, .sub-menu1 a{
+  display: inline-block;
+}
+.sub-menu1 a{
+  padding: 10px 0;
+  margin-right: 10px;
+}
+.menu-act .sub-menu{
+  display: block;
+  /* left: 0; */
+  top: 47px;
+}
+.sub-menu1, .sub-menu2, .sub-menu3{
+  left: 0;
+}
+.sub-menu4, .sub-menu5, .sub-menu6{
+  right: 0;
+}
+/* 비주얼 */
+@keyframes textAni{ 
+  0%{ 
+    font-size: 12px; 
+    color: rgba(0,0,0,0); 
+    /* padding: 0; */ 
+    /* margin; 0; */ 
+    /* top: 0; 
+    left: 0; */ 
+    transform: translate(0,0); 
+  } 
+  100%{ 
+    font-size: 24px; 
+    color: rgba(0,0,0,1); 
+    /* padding: 75px 0 0 400px; */ 
+    /* margin: 75px 0 0 400px; */ 
+    /* top: 75px; 
+    left: 400px; */ 
+    transform: translate(400px,75px); 
+  } 
+} 
+@keyframes bgani{ 
+  0%{ opacity: 1; } 
+  100%{ opacity: 0; } 
+} 
 .visual{
   background-color: lime;
   height: 120px;
+  position: relative;
 }
+.visual::before, .visual::after{  
+  content: ""; 
+  width: 100%; 
+  height: 100%; 
+  position: absolute; /*인라인이므로 변경시킴*/ 
+  /* animation-name: bgAni; 
+  animation-duration: 2000ms; 
+  animation-iteration-count: infinite; 
+  animation-direction: alternate; 
+  animation-timing-function: ease-in-out; 
+  animation-play-state: paused; */ 
+  animation: bgAni 2000ms 1000ms infinite alternate ease-in-out; 
+} 
+.visual::before{ 
+  /* background-color: silver; 
+  background-image: url('./images/ani_flower_01.png'), url('./images/ani_flower_02.png'); 
+  background-repeat: no-repeat; 
+  background-position: 0 -10px, 670px 0; */ 
+  background: url('./images/ani_flower_01.png') no-repeat 0 -10px, url('./images/ani_flower_02.png') no-repeat 670px 0; 
+} 
+.visual::after{ 
+  /* background-color: aqua; */ 
+  background: url('./images/ani_flower_03.png') no-repeat 300px 0, url('./images/ani_flower_04.png') no-repeat 800px 15px; 
+  animation-delay: 1000ms; 
+} 
+.visual-text{ 
+  position: absolute; 
+  background-color: yellow; 
+  animation-name: textAni; 
+  animation-duration: 5s; 
+  animation-fill-mode: forwards; 
+  font-family: Georgia, 'Times New Roman', Times, serif;
+} 
+  
 .main-content{
   min-height: 400px;
   background-color: skyblue;
