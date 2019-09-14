@@ -119,7 +119,7 @@ body{
   font-weight: 700;
   font-size: 1.6rem;
   color: #fff;
-  text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000;
+  text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000;
 }
 .menu-act .btn-menu::after{
   content: "";
@@ -196,7 +196,7 @@ body{
   animation-direction: alternate; 
   animation-timing-function: ease-in-out; 
   animation-play-state: paused; */ 
-  animation: bgAni 2000ms 1000ms infinite alternate ease-in-out; 
+  animation: bgAni 2000ms infinite alternate ease-in-out; 
 } 
 .visual::before{ 
   /* background-color: silver; 
@@ -240,7 +240,6 @@ body{
 .group2{
   flex-basis: 380px;
     /* flex-grow: 1; */
-  background-color:lime;
 }   
 .group3{
   flex-basis: 190px;
@@ -315,7 +314,7 @@ body{
   font-size: 1.3rem;
 }
 .sign li::before{
-  color: #DD680F;
+  color: #e5c62d;
   /* flex-grow: 2; */
 }
 /* 유효성 검사 배너 */
@@ -382,12 +381,123 @@ body{
 } 
 .term-list-brief{ 
   line-height: 1.5; 
+}
+/* 검색 폼 */
+.search-form{
+  background: #ccc linear-gradient(#ccc, #eee); 
+  padding: 15px 25px 10px; 
+  border: 1px solid #aaa; 
+  border-bottom: 0; 
+  border-radius: 15px 15px 0 0; 
+}
+.search-form fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  /* display: flex; 중요!!*/
+}
+/* .container{
+  display: flex; 
+  flex-direction: row; 
+  justify-content: space-between; 
+  align-items: center; 
+} */
+label[for="search"], input[type="search"], .btn-search{ 
+  vertical-align: middle; 
 } 
+input[type="search"]{ 
+  height: 24px; 
+  border: 1px solid #aaa; 
+  padding: 1px 1px 1px 5px; 
+  width: 200px; 
+  border-radius: 3px; 
+  margin: 0 2px; 
+}
+.btn-search{ 
+  background: #121212; 
+  color: #fff; 
+  font: inherit; 
+  border: 1px solid #aaa; 
+  border-radius: 3px; 
+  padding: 0 10px; 
+  height: 24px; 
+  font-size: 1.3rem; 
+} 
+/* 공지사항 및 자료실 */
+.board{
+  background-color: yellow;
+  position: relative;
+}
+.board ul, .board .more{
+  display: none;
+}
+.tab-act ul, .tab-act .more{
+  display: block !important;
+}
+.notice-heading, .pds-heading{
+  margin: 0;
+  font-weight: 400;
+  font-size: 1em; /* 1.4상속 받은거 1배이므로 1.4rem하고 같다 !!중요 */
+  background-color: skyblue;
+  position: absolute;
+  top: 0;
+}
+.notice-heading{
+  left: 0;
+} 
+.pds-heading{
+  left: 73px;
+}
+.tab{
+  display: block;
+  border: 1px solid #aaa;
+  border-radius: 5px 5px 0 0;
+  background:#ccc linear-gradient(#ccc, #eee);
+  padding: 5px 10px;
+  color: #666;
+}
+.tab-act .tab{
+  color: #ed8625;
+  border-color: #ed8625 #ed8625 #fff #ed8625;
+  background: #fff; 
+}
+.board ul{
+  background-color: pink;
+  margin: 20px 0;
+  padding: 45px 0 0 0;
+  list-style: none;
+}
+.board li{
+  background-color: lime;
+  margin: 8px 0;
+  display: flex;
+  /* justify-content: space-between; */
+  
+}
+.board li a{
+  background-color: silver;
+  width: 270px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.board time {
+  background-color: orange;
+  margin-left: auto;
+}
+.board .more{
+  background-color: skyblue;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.more::before{
+  color: hsla(110,70%,20%,1);
+}
 .slogan{
   background-color: orange;
   padding: 15px 0;
 }
-
 .footer-bg{
   background-color: silver;
   padding: 15px 0;
@@ -395,6 +505,5 @@ body{
 .footer{
   background-color: yellow;
 }
-.term {
-  background-color: linear-gradient(to bottom, #f7f765 0%,#e5801b 35%,#e5801b 70%,#f7f765 100%);;
-}
+
+
