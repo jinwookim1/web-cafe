@@ -425,7 +425,6 @@ input[type="search"]{
 } 
 /* 공지사항 및 자료실 */
 .board{
-  background-color: yellow;
   position: relative;
 }
 .board ul, .board .more{
@@ -437,8 +436,7 @@ input[type="search"]{
 .notice-heading, .pds-heading{
   margin: 0;
   font-weight: 400;
-  font-size: 1em; /* 1.4상속 받은거 1배이므로 1.4rem하고 같다 !!중요 */
-  background-color: skyblue;
+  font-size: 1em;   /* 1.4상속 받은거 1배이므로 1.4rem하고 같다 !!중요 */
   position: absolute;
   top: 0;
 }
@@ -462,37 +460,94 @@ input[type="search"]{
   background: #fff; 
 }
 .board ul{
-  background-color: pink;
   margin: 20px 0;
   padding: 45px 0 0 0;
   list-style: none;
 }
 .board li{
-  background-color: lime;
   margin: 8px 0;
   display: flex;
   /* justify-content: space-between; */
   
 }
 .board li a{
-  background-color: silver;
   width: 270px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .board time {
-  background-color: orange;
   margin-left: auto;
 }
 .board .more{
-  background-color: skyblue;
   position: absolute;
   top: 0;
   right: 0;
 }
 .more::before{
   color: hsla(110,70%,20%,1);
+}
+/* 새소식 */
+.news{
+  margin-top: 20px;
+  position: relative;
+}
+.news::before{
+  content: "";
+  background: red linear-gradient(to right, #aaa, #fff);
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 80%;
+  height: 1px;
+}
+.news-heading{
+  margin: 0;
+  font-size: 1.5rem;
+  color: #ed8625;
+}
+.news-link{
+  display: block;
+}
+.news-article{
+  padding-left: 130px;
+  position: relative;
+  min-height: 105px;
+}
+.news-article-subject{
+  margin: 30px 0 0 0; 
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.news-article-date{
+  display: block;
+  margin: 5px 0 10px;
+}
+.news-article-brief{
+  margin: 0;
+  line-height: 1.5;
+}
+.news-article-thumbnail{
+  margin: 0;
+  position: absolute;
+  top: 3px;
+  left: 0;
+}
+.news-article-thumbnail img{
+  box-shadow: 0 15px 15px 0 #aaa;
+}
+.news-article-thumbnail figcaption{
+  text-align: center;
+  margin-top: 15px;
+}
+.news-more{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* 신규이벤트 및 관련 사이트 */
+.gradient-box{
+  background: yellow;
 }
 .slogan{
   background-color: orange;
